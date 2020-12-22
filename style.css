@@ -1,0 +1,457 @@
+/*
+Theme Name: White Allies
+Text Domain: White Allies
+Version: 1.0
+Description: category based for story collection
+Tags: responsive, fancy
+Author: web developer apprentice network
+Author URI: https://webdevapprentice.uk/
+*/
+/* CSS Variables */
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --charcoal_grey: #494D5F;
+  --dark_slate: #1d1e22;
+  --Blueberry: #6B7A8F;
+  --Cerulean: #00303F;
+  --Honey: #DCAE1D;
+  --Apricot: #F7882F;
+  --silver_fox: #d4d4dc;
+  --Magenta: #83085E;
+  --Deep_Apricot: #ED6908;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--light);
+  margin: 30px 50px;
+  line-height: 1.4;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h2 {
+  font-family: 'Krona One', sans-serif;
+}
+
+.btn {
+  background-color: var(--Apricot);
+  color: var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+.btn:hover {
+  background-color: var(--Cerulean);
+  color: var(--light);
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: block;
+}
+
+/* Navigation */
+nav {
+  overflow: auto;
+}
+
+ul.navigation {
+  display: grid;
+  overflow: hidden;
+  background-color: var(--charcoal_grey);
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0;
+  margin: 0 0 0 125px;
+  list-style-type: none;
+}
+
+.logo img {
+  position: absolute;
+  margin-top: 0;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.menu-item a {
+  display: block;
+  background-color: var(--charcoal_grey);
+  color: var(--light);
+  text-align: center;
+  padding: 22px 16px;
+  text-decoration: none;
+}
+
+.menu-item a:hover {
+  background-color: var(--Cerulean);
+  text-decoration: none;
+  color: var(--light);
+}
+
+/* Top Container */
+.top-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    /* 'showcase showcase top-box-a' */
+    'showcase showcase top-box-b';
+}
+
+/* Showcase */
+.showcase {
+  grid-area: showcase;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  /* flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.container h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: var(--light);
+  font-family: 'Krona One', Helvetica, Sans-serif;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+.container p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: var(--light);
+  font-family: Arial, Helvetica, Sans-serif;
+}
+
+#mission h2, #info h2 {
+  text-align: center;
+  padding: .5rem;
+}
+
+#mission p, #info p {
+  text-align: center;
+}
+
+#mission {
+  background-color: var(--silver_fox);
+  box-shadow: var(--shadow);
+  padding: 10px;
+  margin-top: 2rem;
+}
+
+/* Top Box */
+.top-box {
+  background: var(--silver_fox);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+/* .top-box-a {
+  grid-area: top-box-a;
+} */
+.top-box-b {
+  grid-area: top-box-b;
+  background-color: var(--charcoal_grey);
+  color: var(--silver_fox);
+  text-align: center;
+  width: 350px;
+  margin-top: 2rem;
+}
+
+/* Boxes responsive allow for adding more box topics when needed */
+.boxes {
+  padding: 3em;
+  display: grid;
+  grid-gap: 2em;
+  margin-left: 20em;
+  margin-right: 20em;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+  grid-auto-rows: 300px;
+}
+
+.box {
+  background-color: var(--charcoal_grey);
+  color: var(--light);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+.box h2 {
+  color: var(--Apricot);
+  font-size: 1.5rem;
+}
+
+/* Info */
+.lets_talk {
+  background: var(--silver_fox);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+}
+
+#twitter_feed p {
+  text-align: center;
+  box-shadow: var(--shadow);
+  padding: 9rem;
+}
+
+/* Action */
+.action {
+  background: var(--silver_fox);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+  margin-top: 2rem;
+}
+
+.action h2 {
+  text-align: center;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+}
+
+.action p {
+  padding: 0;
+  text-align: center;
+}
+
+a.action-btn {
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-size: 1.5rem;
+  background-color: var(--Cerulean);
+  color: var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  background-color: var(--charcoal_grey);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* slider */
+.carousel-item {
+  height: 40rem;
+  position: relative;
+}
+
+.carousel-inner>.carousel-item>img {
+  min-width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+}
+
+.container {
+  /* text at bottom */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 10px;
+}
+
+.overlay-image-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: centre;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay-image-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: centre;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay-image-3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: centre;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries */
+/* Effective for 767px or less - i pads */
+@media(max-width: 767px) {
+
+  /*  2 top boxes to slide under the showcase img on a large mobile */
+  .top-container {
+    grid-template-areas: 'showcase showcase'
+      'top-box-a top-box-b'
+  }
+
+  .top-box-b {
+    width: 100%;
+  }
+
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container h1 {
+    font-size: 2.5rem;
+  }
+
+  .logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    transform: none;
+  }
+
+  .navigation {
+    /* makes the nav stack up as a column on a mobile */
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+
+  .nav-item a {
+    padding: 10px 20px;
+  }
+
+  .action {
+    /* makes the nav stack up as a column on a mobile */
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+
+  .boxes {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .box {
+    word-break: break-word;
+  }
+
+  .lets_talk {
+    /* makes the section stack up as a column on a mobile */
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 500px) {
+  .carousel-item>img {
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  /*  2 top boxes to slide under the showcase img on a SMALL mobile */
+  .top-container {
+    grid-template-areas: 'showcase'
+      'top-box-a'
+      'top-box-b'
+  }
+
+  ion-icon {
+    font-size: 32px;
+  }
+
+  .box {
+    word-break: break-word;
+  }
+
+  #info {
+    text-align: center;
+  }
+
+  #twitter_feed {
+    text-align: center;
+  }
+
+  #twitter_feed p {
+    padding-right: 2.5rem;
+  }
+
+  .twitter_icon, .fb_icon, .insta_icon {
+    margin: 8px;
+  }
+}
+
+/* #ttr_header {
+  text-align: center;
+  padding: 2em;
+  background-color: #91A3B0;
+}
+
+body {
+  text-align: left;
+}
+
+#ttr_sidebar {
+  border-left: 1px solid black;
+}
+
+footer {
+  width: 100%;
+  border-top: 1px #a2a2a2 solid;
+  text-align: center;
+}
+
+.title {
+  font-size: 11pt;
+  font-family: verdana;
+  font-weight: bold;
+} */
