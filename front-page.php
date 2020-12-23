@@ -19,7 +19,7 @@
                 <div class="overlay-image-1"></div>
                 <div class="container">
                   <h1>White Allies</h1>
-                  <p>Test 1.</p>
+                  <p>Test 2.</p>
                   <a href="#mission" class="btn">
                     Read more
                   </a>
