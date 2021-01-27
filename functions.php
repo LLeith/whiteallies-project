@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 function whiteallie_theme_support(){
 // Adds dynamic title tag support
 add_theme_support('title-tag');
-// Adds ability for admin to update Logo 
+// Adds ability for admin to update Logo
 add_theme_support('custom-logo');
 // ability to add a thumbnail as a featured image to posts
 add_theme_support('post-thumbnails');
@@ -27,7 +27,7 @@ add_action('init','whiteallie_menus');
 
 // enqueue styles
 function whiteallie_register_styles(){
-  
+
   $version = wp_get_theme()->get( 'Version' );
   wp_enqueue_style('whiteallie-style', get_template_directory_uri() . "/style.css", array('whiteallie-bootstrap'), $version, 'all');
   wp_enqueue_style('whiteallie-bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css", array(), '4.5.3', 'all');
@@ -38,10 +38,10 @@ add_action( 'wp_enqueue_scripts', 'whiteallie_register_styles');
 
 
 // enqueue scripts
-function whiteallie_register_scripts(){  
+function whiteallie_register_scripts(){
   wp_enqueue_script('whiteallie-jquery', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), '3.5.1',true);
   wp_enqueue_script('whiteallie-popper', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', array(), '4.5.3',true);
-  wp_enqueue_script('whiteallie-jsicons', 'https://unpkg.com/ionicons@5.1.2/dist/ionicons.js', array(), '5.1.2',true);  
+  wp_enqueue_script('whiteallie-jsicons', 'https://unpkg.com/ionicons@5.1.2/dist/ionicons.js', array(), '5.1.2',true);
 }
 add_action( 'wp_enqueue_scripts', 'whiteallie_register_scripts');
 
@@ -61,5 +61,22 @@ function whiteallie_widget_areas(){
   );
 }
 add_action( 'widgets_init', 'whiteallie_widget_areas');
+
+// Adds a Custom Post Type to use for the Slider in the front page template
+function waslider_custom_post_type() {
+    register_post_type('wa_slider',
+        array(
+            'labels'      => array(
+                'name'          => __('Slides', 'textdomain'),
+                'singular_name' => __('Slide', 'textdomain'),
+            ),
+                'public'      => true,
+                'has_archive' => true,
+                'menu_icon' => 'dashicons-format-gallery',
+        )
+    );
+}
+add_action('init', 'waslider_custom_post_type');
+add_post_type_support( 'wa_slider', 'thumbnail' );
 
  ?>
