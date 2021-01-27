@@ -183,7 +183,27 @@ ul.navigation {
   text-align: center;
   width: 350px;
   margin-top: 2rem;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
 }
+
+/* wp contact form 7 FRONT page styling */
+#wpcf7-f143-o1 {
+padding: 25px;
+}
+
+#wpcf7-f143-o1 textarea {
+  width: 90%;
+  }
+
+#wpcf7-f143-o1 input {
+    width: 90%;
+      }
+
+.wpcf7-submit {
+
+      }
 
 /* Boxes responsive allow for adding more box topics when needed */
 .boxes {
@@ -269,6 +289,8 @@ footer {
 }
 
 /* slider */
+.carousel-inner {}
+
 .carousel-item {
   height: 40rem;
   position: relative;
@@ -323,6 +345,20 @@ footer {
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+/*Contact form 7 plugin page styling */
+#wpcf7-f143-p29-o1 {
+  background-color: var(--silver_fox);
+  color: var(--charcoal_grey);
+  font-family: Arial, Helvetica, Sans-serif;
+  border: 3px solid var(--charcoal_grey);
+  box-shadow: var(--shadow);
+  padding: 25px;
+}
+
+/* #wpcf7-f143-p29-o1 textarea {
+  width: 100%;
+} */
 
 /* Media Queries */
 /* Effective for 767px or less - i pads */
@@ -411,6 +447,10 @@ footer {
 
   .box {
     word-break: break-word;
+  }
+
+  .box h2 {
+    font-size: 1rem;
   }
 
   #info {

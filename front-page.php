@@ -1,4 +1,4 @@
-<?php  
+<?php
   get_header();
 ?>
 
@@ -19,7 +19,7 @@
                 <div class="overlay-image-1"></div>
                 <div class="container">
                   <h1>White Allies</h1>
-                  <p>Test 2.</p>
+                  <p>Share your story.</p>
                   <a href="#mission" class="btn">
                     Read more
                   </a>
@@ -59,9 +59,9 @@
             </a>
         </div>
         </header>
-    
-      
-      <div class="top-box top-box-b">
+
+
+      <div class="top-box-b">
           <?php echo do_shortcode('[contact-form-7 id="45" title="Submit Your Story"]'); ?>
       </div>
     </section>
@@ -143,9 +143,8 @@
     </section>
 
     <!--footer-->
-    
-  
-  <?php 
+
+
+  <?php
     get_footer()
    ?>
-  
