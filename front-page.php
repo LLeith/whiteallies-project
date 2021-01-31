@@ -5,6 +5,7 @@
       <section class="top-container">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -39,6 +40,8 @@
                     Read more
                   </a>
 =======
+=======
+>>>>>>> ed24093bf03a1b21981dcf7e7b50782c451cd003
         <?php
         $args = array(
                 'post_type' => 'wa_slider',
@@ -99,7 +102,10 @@
                       <span class="sr-only">Previous</span>
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </a>
+<<<<<<< HEAD
 >>>>>>> ed24093... Made the homepage slider content-managed, introduced post loop to archive template, added a CPT to use for homepage slides, added styling for contact forms
+=======
+>>>>>>> ed24093bf03a1b21981dcf7e7b50782c451cd003
                 </div>
               </header>
               </div>
@@ -108,6 +114,7 @@
         ?>
         <!--slider-->
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
               <span class="sr-only">Previous</span>
@@ -123,6 +130,8 @@
 
       <div class="top-box-b">
 =======
+=======
+>>>>>>> ed24093bf03a1b21981dcf7e7b50782c451cd003
       <div class="top-box top-box-b">
 >>>>>>> ed24093... Made the homepage slider content-managed, introduced post loop to archive template, added a CPT to use for homepage slides, added styling for contact forms
           <?php echo do_shortcode('[contact-form-7 id="45" title="Submit Your Story"]'); ?>

@@ -93,6 +93,7 @@ function waslider_custom_post_type() {
 add_action('init', 'waslider_custom_post_type');
 add_post_type_support( 'wa_slider', 'thumbnail' );
 
+<<<<<<< HEAD
 
 // Add page excerpt to menu items for Action Allies menu
 function wa_nav_menu_page_excerpts( $title, $item, $args, $depth ) {
@@ -116,3 +117,6 @@ function wa_menu_classes( $classes, $item, $args ) {
 }
 add_filter( 'nav_menu_css_class', 'wa_menu_classes', 1, 3 );
 ?>
+=======
+ ?>
+>>>>>>> ed24093bf03a1b21981dcf7e7b50782c451cd003

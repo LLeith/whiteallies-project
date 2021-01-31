@@ -194,6 +194,7 @@ ul.navigation {
 
 /* wp contact form 7 FRONT page styling */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #wpcf7-f143-o1 {
 padding: 25px;
 }
@@ -232,7 +233,24 @@ padding: 25px;
 .wpcf7 label,
 .wpcf7-submit {
   width: 100%;
+=======
+.wpcf7 {
+padding: 25px;
+>>>>>>> ed24093bf03a1b21981dcf7e7b50782c451cd003
 }
+
+.wpcf7 textarea {
+  width: 90%;
+  }
+
+.wpcf7 input,
+.wpcf7 label {
+    width: 90%;
+      }
+
+.wpcf7-submit {
+
+      }
 
 /* Boxes responsive allow for adding more box topics when needed */
 .boxes {
