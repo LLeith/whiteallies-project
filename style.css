@@ -189,6 +189,7 @@ ul.navigation {
 }
 
 /* wp contact form 7 FRONT page styling */
+<<<<<<< HEAD
 #wpcf7-f143-o1 {
 padding: 25px;
 }
@@ -198,6 +199,18 @@ padding: 25px;
   }
 
 #wpcf7-f143-o1 input {
+=======
+.wpcf7 {
+padding: 25px;
+}
+
+.wpcf7 textarea {
+  width: 90%;
+  }
+
+.wpcf7 input,
+.wpcf7 label {
+>>>>>>> ed24093... Made the homepage slider content-managed, introduced post loop to archive template, added a CPT to use for homepage slides, added styling for contact forms
     width: 90%;
       }
 
@@ -475,21 +488,17 @@ footer {
   padding: 2em;
   background-color: #91A3B0;
 }
-
 body {
   text-align: left;
 }
-
 #ttr_sidebar {
   border-left: 1px solid black;
 }
-
 footer {
   width: 100%;
   border-top: 1px #a2a2a2 solid;
   text-align: center;
 }
-
 .title {
   font-size: 11pt;
   font-family: verdana;

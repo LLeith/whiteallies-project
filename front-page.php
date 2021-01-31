@@ -3,15 +3,8 @@
 ?>
 
       <section class="top-container">
-        <!--slider-->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-          <header class="showcase">
 
+<<<<<<< HEAD
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -45,10 +38,77 @@
                   <a href="#mission" class="btn">
                     Read more
                   </a>
-                </div>
-              </div>
-            </div>
+=======
+        <?php
+        $args = array(
+                'post_type' => 'wa_slider',
+                'post_status' => 'publish',
+                'posts_per_page' => -1,
+                'orderby' => 'date',
+                'order' => 'ASC',
+            );
 
+            $loop = new WP_Query( $args );
+
+            if ( $loop->have_posts() ) :
+              ?>
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <?php
+                  $i = 0;
+                  $active = 'active';
+                  while ( $loop->have_posts() ) : $loop->the_post();
+                    ?>
+                    <li data-target="#myCarousel" data-slide-to="<?php echo $i; ?>" class="<?php echo $active; ?>"></li>
+                    <?php
+                    $i++;
+                    $active = null;
+                  endwhile;
+                  ?>
+                </ol>
+                <header class="showcase">
+                  <div class="carousel-inner">
+                    <?php
+                    $j = 0;
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                      // $featured_img = wp_get_attachment_image_src( $post->ID );
+                      $title = get_the_title();
+                      $excerpt = get_the_excerpt();
+                      $link = get_field('link');
+                      if ( $j == 0 ) { $active = 'active'; } else { $active = null; }
+                      ?>
+                      <div class="carousel-item <?php echo $active; ?>">
+                        <?php the_post_thumbnail( $post->ID, 'full' ); ?>
+                        <div class="overlay-image-1"></div>
+                        <div class="container">
+                          <h1><?php echo $title; ?></h1>
+                          <p><?php echo $excerpt; ?></p>
+                          <a href="<?php echo $link['url']; ?>" class="button" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+                        </div>
+                      </div>
+                      <?php
+                      $j++;
+                    endwhile;
+                    wp_reset_postdata();
+                    ?>
+                    <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+                      <span class="sr-only">Previous</span>
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+                      <span class="sr-only">Previous</span>
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+>>>>>>> ed24093... Made the homepage slider content-managed, introduced post loop to archive template, added a CPT to use for homepage slides, added styling for contact forms
+                </div>
+              </header>
+              </div>
+            <?php
+            endif;
+        ?>
+        <!--slider-->
+
+<<<<<<< HEAD
             <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
               <span class="sr-only">Previous</span>
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -62,6 +122,9 @@
 
 
       <div class="top-box-b">
+=======
+      <div class="top-box top-box-b">
+>>>>>>> ed24093... Made the homepage slider content-managed, introduced post loop to archive template, added a CPT to use for homepage slides, added styling for contact forms
           <?php echo do_shortcode('[contact-form-7 id="45" title="Submit Your Story"]'); ?>
       </div>
     </section>
