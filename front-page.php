@@ -3,9 +3,15 @@
 ?>
 
       <section class="top-container">
+        <!--slider-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <header class="showcase">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -39,83 +45,10 @@
                   <a href="#mission" class="btn">
                     Read more
                   </a>
-=======
-=======
->>>>>>> ed24093bf03a1b21981dcf7e7b50782c451cd003
-        <?php
-        $args = array(
-                'post_type' => 'wa_slider',
-                'post_status' => 'publish',
-                'posts_per_page' => -1,
-                'orderby' => 'date',
-                'order' => 'ASC',
-            );
-
-            $loop = new WP_Query( $args );
-
-            if ( $loop->have_posts() ) :
-              ?>
-              <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <?php
-                  $i = 0;
-                  $active = 'active';
-                  while ( $loop->have_posts() ) : $loop->the_post();
-                    ?>
-                    <li data-target="#myCarousel" data-slide-to="<?php echo $i; ?>" class="<?php echo $active; ?>"></li>
-                    <?php
-                    $i++;
-                    $active = null;
-                  endwhile;
-                  ?>
-                </ol>
-                <header class="showcase">
-                  <div class="carousel-inner">
-                    <?php
-                    $j = 0;
-                    while ( $loop->have_posts() ) : $loop->the_post();
-                      // $featured_img = wp_get_attachment_image_src( $post->ID );
-                      $title = get_the_title();
-                      $excerpt = get_the_excerpt();
-                      $link = get_field('link');
-                      if ( $j == 0 ) { $active = 'active'; } else { $active = null; }
-                      ?>
-                      <div class="carousel-item <?php echo $active; ?>">
-                        <?php the_post_thumbnail( $post->ID, 'full' ); ?>
-                        <div class="overlay-image-1"></div>
-                        <div class="container">
-                          <h1><?php echo $title; ?></h1>
-                          <p><?php echo $excerpt; ?></p>
-                          <a href="<?php echo $link['url']; ?>" class="button" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
-                        </div>
-                      </div>
-                      <?php
-                      $j++;
-                    endwhile;
-                    wp_reset_postdata();
-                    ?>
-                    <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
-                      <span class="sr-only">Previous</span>
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </a>
-                    <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
-                      <span class="sr-only">Previous</span>
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </a>
-<<<<<<< HEAD
->>>>>>> ed24093... Made the homepage slider content-managed, introduced post loop to archive template, added a CPT to use for homepage slides, added styling for contact forms
-=======
->>>>>>> ed24093bf03a1b21981dcf7e7b50782c451cd003
                 </div>
-              </header>
               </div>
-            <?php
-            endif;
-        ?>
-        <!--slider-->
+            </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
               <span class="sr-only">Previous</span>
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -129,18 +62,17 @@
 
 
       <div class="top-box-b">
-=======
-=======
->>>>>>> ed24093bf03a1b21981dcf7e7b50782c451cd003
-      <div class="top-box top-box-b">
->>>>>>> ed24093... Made the homepage slider content-managed, introduced post loop to archive template, added a CPT to use for homepage slides, added styling for contact forms
           <?php echo do_shortcode('[contact-form-7 id="45" title="Submit Your Story"]'); ?>
       </div>
     </section>
 
 
     <!-- mission Section -->
-    <?php dynamic_sidebar('mission'); ?>
+    <section id="mission">
+      <h2>Our Mission</h2>
+      <p>To create a global community of white allies consisting of individuals within families, institutions, companies, organisations and even governments. <br>These will be people who care and want to bring an end to the scourge of racism in our
+        society. <br>White allies will stand with black people wherever they are in their endeavors to shine a light on racism, demand change and celebrate when that change becomes reality.</p>
+    </section>
 
     <!-- Boxes Section -->
     <section class="boxes">
@@ -197,7 +129,16 @@
       <img src="<?php bloginfo('template_url');?>/assets/images/pexels-andrea-piacquadio-3865557.jpg" alt="multiple races of people putting hands together and smiling">
       <div id="action_allies">
         <h2>Action Allies</h2>
-        <?php wp_nav_menu('action_allies'); ?>
+        <a href="#" class="action-btn">Statistics</a>
+        <p>ia soluta eligendi, eum. Maiores voluptates eius odit laborum autem molestiae sapiente.
+        </p>
+        <a href="#" class="action-btn">Action</a>
+        <p>ia soluta eligendi, eum. Maiores voluptates eius odit laborum autem molestiae sapiente.
+        </p>
+        <a href="#" class="action-btn">Resources</a>
+        <p>ia soluta eligendi, eum. Maiores voluptates eius odit laborum autem molestiae sapiente.
+        </p>
+        <a href="#" class="action-btn">Donate</a>
       </div>
     </section>
 
