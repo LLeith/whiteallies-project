@@ -7,6 +7,8 @@ add_theme_support('title-tag');
 add_theme_support('custom-logo');
 // ability to add a thumbnail as a featured image to posts
 add_theme_support('post-thumbnails');
+// ability to add Excerpts to pages
+add_post_type_support('page', 'excerpt');
 }
 add_action('after_setup_theme', 'whiteallie_theme_support');
 
@@ -16,6 +18,7 @@ add_action('after_setup_theme', 'whiteallie_theme_support');
 function whiteallie_menus() {
   $locations = array(
     'primary' => "Desktop primary top nav",
+    'secondary' => "Action Allies (front page)",
     'footer' => "Footer menu items"
   );
   register_nav_menus($locations);
@@ -53,10 +56,21 @@ function whiteallie_widget_areas(){
       'before_title' => '<h2>',
       'after_title' => '</h2>',
       'before_widget' => '',
-      'after_widget' => '',
+      'after_widget' => '<p>White Allies &copy; '.date('Y').'</p>',
       'name' => 'Footer Area',
       'id' => 'footer-1',
       'description' => 'Footer Widget area'
+    )
+  );
+  register_sidebar(
+    array(
+      'before_title' => '<h2>',
+      'after_title' => '</h2>',
+      'before_widget' => '<article id="our-mission">',
+      'after_widget' => '</article>',
+      'name' => 'Mission',
+      'id' => 'mission',
+      'description' => 'Put your Mission Statement here'
     )
   );
 }
@@ -79,4 +93,26 @@ function waslider_custom_post_type() {
 add_action('init', 'waslider_custom_post_type');
 add_post_type_support( 'wa_slider', 'thumbnail' );
 
- ?>
+
+// Add page excerpt to menu items for Action Allies menu
+function wa_nav_menu_page_excerpts( $title, $item, $args, $depth ) {
+  if ( $args->menu->name == 'Action Allies Menu' ) {
+    $pid = $item->object_id;
+    $text = get_the_excerpt($pid);
+    if ( !empty($text) ) {
+      $title .= ' <span class="excerpt">- '.$text.'</span>';
+    }
+  }
+  return $title;
+}
+add_filter( 'nav_menu_item_title', 'wa_nav_menu_page_excerpts', 10, 4 );
+
+// Add custom class to menu items in Action Allies menu
+function wa_menu_classes( $classes, $item, $args ) {
+  if ( $args->menu->name == 'Action Allies Menu' ) {
+    $classes[] = 'action-btn';
+  }
+  return $classes;
+}
+add_filter( 'nav_menu_css_class', 'wa_menu_classes', 1, 3 );
+?>

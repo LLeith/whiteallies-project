@@ -147,20 +147,24 @@ ul.navigation {
   font-family: Arial, Helvetica, Sans-serif;
 }
 
-#mission h2, #info h2 {
+#our-mission h2, #info h2 {
   text-align: center;
   padding: .5rem;
 }
 
-#mission p, #info p {
+#our-mission p, #info p {
   text-align: center;
 }
 
-#mission {
+#our-mission {
   background-color: var(--silver_fox);
   box-shadow: var(--shadow);
   padding: 10px;
   margin-top: 2rem;
+}
+#mission {
+  text-align: center;
+  padding: 0.5rem;
 }
 
 /* Top Box */
@@ -204,19 +208,31 @@ padding: 25px;
 padding: 25px;
 }
 
-.wpcf7 textarea {
-  width: 90%;
-  }
+.wpcf7-form-control .wpcf7-list-item {
+  width: 100%;
+  margin: 0;
+}
 
+<<<<<<< HEAD
 .wpcf7 input,
 .wpcf7 label {
 >>>>>>> ed24093... Made the homepage slider content-managed, introduced post loop to archive template, added a CPT to use for homepage slides, added styling for contact forms
     width: 90%;
       }
+=======
+.wpcf7-form-control .wpcf7-list-item input,
+.wpcf7-form-control .wpcf7-list-item span {
+  width: auto;
+}
+>>>>>>> 0d79877... Committing because Andrew said so
 
+.wpcf7-form-control,
+.wpcf7 textarea,
+.wpcf7 input,
+.wpcf7 label,
 .wpcf7-submit {
-
-      }
+  width: 100%;
+}
 
 /* Boxes responsive allow for adding more box topics when needed */
 .boxes {
@@ -280,16 +296,23 @@ padding: 25px;
   text-align: center;
 }
 
-a.action-btn {
+ul#menu-action-allies-menu {
+  list-style-type: none;
+}
+
+.action-btn a {
   display: block;
   text-align: center;
-  margin: auto;
+  margin: 1em;
   font-size: 1.5rem;
   background-color: var(--Cerulean);
   color: var(--light);
   padding: 0.6rem 1.3rem;
   text-decoration: none;
   border: 0;
+}
+.action-btn a:hover {
+  background-color: var(--charcoal_grey);
 }
 
 /* Footer */
