@@ -79,11 +79,11 @@
 
 
     <!-- mission Section -->
-    <section id="mission">
-      <h2>Our Mission</h2>
-      <p>To create a global community of white allies consisting of individuals within families, institutions, companies, organisations and even governments. <br>These will be people who care and want to bring an end to the scourge of racism in our
-        society. <br>White allies will stand with black people wherever they are in their endeavors to shine a light on racism, demand change and celebrate when that change becomes reality.</p>
-    </section>
+    <?php
+    if ( is_active_sidebar( 'mission' ) ) {
+        dynamic_sidebar( 'mission' );
+    }
+    ?>
 
     <!-- Boxes Section -->
     <section class="boxes">
