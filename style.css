@@ -83,6 +83,14 @@ ul.navigation {
   margin: 0 0 0 125px;
   list-style-type: none;
 }
+/* Style the Action Allies menu */
+section#action ul.menu {
+    list-style-type: none;
+}
+section#action ul.menu li {
+    margin: 1em 0;
+}
+/* ---------------------------- */
 
 .logo img {
   position: absolute;
@@ -98,6 +106,13 @@ ul.navigation {
   text-align: center;
   padding: 22px 16px;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.menu-item a span.excerpt {
+  font-size: initial;
+  font-weight: initial;
 }
 
 .menu-item a:hover {
@@ -250,9 +265,9 @@ padding: 25px;
 .action {
   background: var(--silver_fox);
   box-shadow: var(--shadow);
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(2, 1fr);
+  /* display: grid; */
+  /* grid-gap: 30px; */
+  /* grid-template-columns: repeat(2, 1fr); */
   padding: 3rem;
   margin-top: 2rem;
 }

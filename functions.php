@@ -100,7 +100,7 @@ function wa_nav_menu_page_excerpts( $title, $item, $args, $depth ) {
     $pid = $item->object_id;
     $text = get_the_excerpt($pid);
     if ( !empty($text) ) {
-      $title .= ' <span class="excerpt">- '.$text.'</span>';
+      $title .= '<br><span class="excerpt">'.$text.'</span>';
     }
   }
   return $title;

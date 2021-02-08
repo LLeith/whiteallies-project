@@ -136,22 +136,13 @@
     </section>
 
     <!-- Action section -->
+    <?php if ( has_nav_menu('secondary') ) { ?>
     <section class="action" id="action">
+      <h2>Action Allies</h2>
+      <?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
       <img src="<?php bloginfo('template_url');?>/assets/images/pexels-andrea-piacquadio-3865557.jpg" alt="multiple races of people putting hands together and smiling">
-      <div id="action_allies">
-        <h2>Action Allies</h2>
-        <a href="#" class="action-btn">Statistics</a>
-        <p>ia soluta eligendi, eum. Maiores voluptates eius odit laborum autem molestiae sapiente.
-        </p>
-        <a href="#" class="action-btn">Action</a>
-        <p>ia soluta eligendi, eum. Maiores voluptates eius odit laborum autem molestiae sapiente.
-        </p>
-        <a href="#" class="action-btn">Resources</a>
-        <p>ia soluta eligendi, eum. Maiores voluptates eius odit laborum autem molestiae sapiente.
-        </p>
-        <a href="#" class="action-btn">Donate</a>
-      </div>
     </section>
+    <?php } ?>
 
     <!--footer-->
 
