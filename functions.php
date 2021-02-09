@@ -53,23 +53,23 @@ add_action( 'wp_enqueue_scripts', 'whiteallie_register_scripts');
 function whiteallie_widget_areas(){
   register_sidebar(
     array(
+      'name' => 'Footer Area',
+      'id' => 'footer-1',
       'before_title' => '<h2>',
       'after_title' => '</h2>',
       'before_widget' => '',
       'after_widget' => '<p>White Allies &copy; '.date('Y').'</p>',
-      'name' => 'Footer Area',
-      'id' => 'footer-1',
       'description' => 'Footer Widget area'
     )
   );
   register_sidebar(
     array(
-      'before_title' => '<h2>',
-      'after_title' => '</h2>',
-      'before_widget' => '<article id="our-mission">',
-      'after_widget' => '</article>',
       'name' => 'Mission',
       'id' => 'mission',
+      'before_title' => '<h2>',
+      'after_title' => '</h2>',
+      'before_widget' => '<section id="mission">',
+      'after_widget' => '</section>',
       'description' => 'Put your Mission Statement here'
     )
   );
@@ -100,7 +100,7 @@ function wa_nav_menu_page_excerpts( $title, $item, $args, $depth ) {
     $pid = $item->object_id;
     $text = get_the_excerpt($pid);
     if ( !empty($text) ) {
-      $title .= ' <span class="excerpt">- '.$text.'</span>';
+      $title .= '<br><span class="excerpt">'.$text.'</span>';
     }
   }
   return $title;
