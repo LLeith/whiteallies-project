@@ -89,6 +89,42 @@ function waslider_custom_post_type() {
                 'menu_icon' => 'dashicons-format-gallery',
         )
     );
+    register_post_type('wa_story',
+        array(
+            'labels'      => array(
+                'name'          => __('Stories', 'textdomain'),
+                'singular_name' => __('Story', 'textdomain'),
+            ),
+                'public'      => true,
+                'has_archive' => true,
+                'menu_icon' => 'dashicons-book-alt',
+        )
+    );
+    register_post_type('wa_person',
+        array(
+            'labels'      => array(
+                'name'          => __('People', 'textdomain'),
+                'singular_name' => __('Person', 'textdomain'),
+            ),
+                'public'      => true,
+                'has_archive' => 'people',
+                'capability_type' => 'post',
+                'menu_icon' => 'dashicons-groups',
+                'hierarchical' => false,
+                'supports' => array('title','thumbnail','excerpt', 'editor')
+        )
+    );
+    register_post_type('wa_statistic',
+        array(
+            'labels'      => array(
+                'name'          => __('Statistics', 'textdomain'),
+                'singular_name' => __('Statistic', 'textdomain'),
+            ),
+                'public'      => true,
+                'has_archive' => true,
+                'menu_icon' => 'dashicons-chart-area',
+        )
+    );
 }
 add_action('init', 'waslider_custom_post_type');
 add_post_type_support( 'wa_slider', 'thumbnail' );

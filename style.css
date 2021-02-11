@@ -224,12 +224,16 @@ padding: 25px;
 /* Boxes responsive allow for adding more box topics when needed */
 .boxes {
   padding: 3em;
-  display: grid;
-  grid-gap: 2em;
+  /* display: grid; */
+  /* grid-gap: 2em; */
   margin-left: 20em;
   margin-right: 20em;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
-  grid-auto-rows: 300px;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 3fr)); */
+  /* grid-auto-rows: 300px; */
+  width: 85%;
+  padding: 3em;
+  margin: 2em auto;
+  text-align: center;
 }
 
 .box {
@@ -238,6 +242,10 @@ padding: 25px;
   text-align: center;
   padding: 1.5rem 2rem;
   box-shadow: var(--shadow);
+  display: inline-table;
+  width: 300px;
+  height: 300px;
+  margin: 2em;
 }
 
 .box h2 {
