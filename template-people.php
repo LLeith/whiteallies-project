@@ -5,7 +5,7 @@
 get_header();
 
 $loop = new WP_Query( array(
-    'post_type' => 'wa_person',
+    'post_type' => 'allies',
     'posts_per_page' => -1
   )
 );

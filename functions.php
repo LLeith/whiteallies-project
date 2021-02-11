@@ -100,14 +100,14 @@ function waslider_custom_post_type() {
                 'menu_icon' => 'dashicons-book-alt',
         )
     );
-    register_post_type('wa_person',
+    register_post_type('allies',
         array(
             'labels'      => array(
-                'name'          => __('People', 'textdomain'),
-                'singular_name' => __('Person', 'textdomain'),
+                'name'          => __('Allies', 'textdomain'),
+                'singular_name' => __('Ally', 'textdomain'),
             ),
                 'public'      => true,
-                'has_archive' => 'people',
+                'has_archive' => 'allies',
                 'capability_type' => 'post',
                 'menu_icon' => 'dashicons-groups',
                 'hierarchical' => false,

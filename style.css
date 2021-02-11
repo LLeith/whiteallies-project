@@ -130,6 +130,12 @@ section#action ul.menu li {
     'showcase showcase top-box-b';
 }
 
+article.content {
+    max-width: 85%;
+    margin: 2em auto;
+    padding: 2em;
+}
+
 /* Showcase */
 .showcase {
   grid-area: showcase;
