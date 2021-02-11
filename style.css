@@ -38,7 +38,6 @@ html {
 
 body {
   background: var(--light);
-  margin: 30px 50px;
   line-height: 1.4;
   overflow-x: hidden;
   position: relative;
@@ -136,6 +135,12 @@ article.content {
     padding: 2em;
 }
 
+.menu-action-allies-menu-container {
+    width: 50%;
+    /* float: right; */
+    padding: 2em;
+}
+
 /* Showcase */
 .showcase {
   grid-area: showcase;
@@ -180,8 +185,9 @@ article.content {
 #mission {
   background-color: var(--silver_fox);
   box-shadow: var(--shadow);
-  padding: 10px;
-  margin-top: 2rem;
+  padding: 2em 4em;
+  margin: 2em auto;
+  max-width: 90%;
 }
 
 /* Top Box */
@@ -211,34 +217,34 @@ article.content {
 
 /* wp contact form 7 FRONT page styling */
 .wpcf7 {
-padding: 25px;
+  padding: 25px;
+  text-align: center;
 }
 
-.wpcf7 textarea {
-  width: 90%;
-  }
-
+.wpcf7 textarea,
 .wpcf7 input,
 .wpcf7 label {
-    width: 90%;
-      }
+  width: 100%;
+  }
 
-.wpcf7-submit {
 
-      }
+main.wrap {
+  max-width: 85%;
+  margin: 2em auto;
+  padding: 3em;
+}
 
 /* Boxes responsive allow for adding more box topics when needed */
 .boxes {
-  padding: 3em;
+  /* padding: 3em; */
   /* display: grid; */
   /* grid-gap: 2em; */
-  margin-left: 20em;
-  margin-right: 20em;
+  /* margin-left: 20em; */
+  /* margin-right: 20em; */
   /* grid-template-columns: repeat(auto-fit, minmax(250px, 3fr)); */
   /* grid-auto-rows: 300px; */
   width: 85%;
-  padding: 3em;
-  margin: 2em auto;
+  /* margin: 2em auto; */
   text-align: center;
 }
 
@@ -332,6 +338,12 @@ footer {
 
 .carousel-item img {
   width: 100%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  height: fit-content;
+  top: 50%;
 }
 
 .container {

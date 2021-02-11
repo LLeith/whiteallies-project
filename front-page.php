@@ -1,6 +1,7 @@
 <?php
   get_header();
 ?>
+<main class="wrap">
 
       <section class="top-container">
 
@@ -145,6 +146,7 @@
     <?php } ?>
 
     <!--footer-->
+  </main>
 
 
   <?php

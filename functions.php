@@ -114,7 +114,7 @@ function waslider_custom_post_type() {
                 'supports' => array('title','thumbnail','excerpt', 'editor')
         )
     );
-    register_post_type('wa_statistic',
+    register_post_type('statistic',
         array(
             'labels'      => array(
                 'name'          => __('Statistics', 'textdomain'),
