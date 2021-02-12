@@ -73,6 +73,17 @@ function whiteallie_widget_areas(){
       'description' => 'Put your Mission Statement here'
     )
   );
+  register_sidebar(
+    array(
+      'name' => 'Action Allies',
+      'id' => 'action',
+      'before_title' => '<h2>',
+      'after_title' => '</h2>',
+      'before_widget' => '<div class="action">',
+      'after_widget' => '</div>',
+      'description' => 'Links to site resources'
+    )
+  );
 }
 add_action( 'widgets_init', 'whiteallie_widget_areas');
 
@@ -87,6 +98,43 @@ function waslider_custom_post_type() {
                 'public'      => true,
                 'has_archive' => true,
                 'menu_icon' => 'dashicons-format-gallery',
+        )
+    );
+    register_post_type('wa_story',
+        array(
+            'labels'      => array(
+                'name'          => __('Stories', 'textdomain'),
+                'singular_name' => __('Story', 'textdomain'),
+            ),
+                'public'      => true,
+                'has_archive' => true,
+                'menu_icon' => 'dashicons-book-alt',
+        )
+    );
+    register_post_type('allies',
+        array(
+            'labels'      => array(
+                'name'          => __('Allies', 'textdomain'),
+                'singular_name' => __('Ally', 'textdomain'),
+            ),
+                'public'      => true,
+                'has_archive' => 'allies',
+                'capability_type' => 'post',
+                'menu_icon' => 'dashicons-groups',
+                'hierarchical' => false,
+                'supports' => array('title','thumbnail','excerpt', 'editor')
+        )
+    );
+    register_post_type('statistic',
+        array(
+            'labels'      => array(
+                'name'          => __('Statistics', 'textdomain'),
+                'singular_name' => __('Statistic', 'textdomain'),
+            ),
+                'public'      => true,
+                'has_archive' => true,
+                'menu_icon' => 'dashicons-chart-area',
+                'supports' => array('title','thumbnail','excerpt', 'editor')
         )
     );
 }

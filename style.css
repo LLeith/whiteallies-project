@@ -38,7 +38,6 @@ html {
 
 body {
   background: var(--light);
-  margin: 30px 50px;
   line-height: 1.4;
   overflow-x: hidden;
   position: relative;
@@ -74,14 +73,24 @@ nav {
   overflow: auto;
 }
 
+nav.main {
+  display: block;
+  background-color: var(--charcoal_grey);
+  padding: 1em;
+}
+
+nav.main .menu-item {
+  display: inline-block;
+}
+
 ul.navigation {
-  display: grid;
+  display: inline-block;
   overflow: hidden;
   background-color: var(--charcoal_grey);
-  grid-template-columns: repeat(5, 1fr);
   padding: 0;
-  margin: 0 0 0 125px;
+  margin: 0 1em 0 0;
   list-style-type: none;
+  float: right;
 }
 /* Style the Action Allies menu */
 section#action ul.menu {
@@ -92,11 +101,15 @@ section#action ul.menu li {
 }
 /* ---------------------------- */
 
-.logo img {
-  position: absolute;
+.custom-logo-link {
   margin-top: 0;
-  margin-left: 10px;
-  margin-bottom: 10px;
+  margin-left: 1em;
+  display: inline-block;
+}
+.custom-logo-link img {
+  width: 100px;
+  height: auto;
+  filter:  brightness(0) invert(1);
 }
 
 .menu-item a {
@@ -129,6 +142,18 @@ section#action ul.menu li {
     /* 'showcase showcase top-box-a' */
     'showcase showcase top-box-b';
 }
+
+article.content {
+    max-width: 85%;
+    margin: 2em auto;
+    padding: 2em;
+}
+
+/* .menu-action-allies-menu-container { */
+    /* width: 50%; */
+    /* float: right; */
+    /* padding: 2em; */
+/* } */
 
 /* Showcase */
 .showcase {
@@ -174,8 +199,9 @@ section#action ul.menu li {
 #mission {
   background-color: var(--silver_fox);
   box-shadow: var(--shadow);
-  padding: 10px;
-  margin-top: 2rem;
+  padding: 2em 4em;
+  margin: 2em auto;
+  max-width: 90%;
 }
 
 /* Top Box */
@@ -205,31 +231,36 @@ section#action ul.menu li {
 
 /* wp contact form 7 FRONT page styling */
 .wpcf7 {
-padding: 25px;
+  padding: 25px;
+  text-align: center;
 }
 
-.wpcf7 textarea {
-  width: 90%;
+.wpcf7 textarea,
+.wpcf7 input,
+.wpcf7 label,
+.wpcf7 select {
+  width: 100%;
   }
 
-.wpcf7 input,
-.wpcf7 label {
-    width: 90%;
-      }
 
-.wpcf7-submit {
-
-      }
+main.wrap {
+  max-width: 85%;
+  margin: 2em auto;
+  padding: 3em;
+}
 
 /* Boxes responsive allow for adding more box topics when needed */
 .boxes {
-  padding: 3em;
-  display: grid;
-  grid-gap: 2em;
-  margin-left: 20em;
-  margin-right: 20em;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
-  grid-auto-rows: 300px;
+  /* padding: 3em; */
+  /* display: grid; */
+  /* grid-gap: 2em; */
+  /* margin-left: 20em; */
+  /* margin-right: 20em; */
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 3fr)); */
+  /* grid-auto-rows: 300px; */
+  width: 85%;
+  margin: 2em auto;
+  text-align: center;
 }
 
 .box {
@@ -238,6 +269,10 @@ padding: 25px;
   text-align: center;
   padding: 1.5rem 2rem;
   box-shadow: var(--shadow);
+  display: inline-table;
+  width: 300px;
+  height: 300px;
+  margin: 2em;
 }
 
 .box h2 {
@@ -262,17 +297,23 @@ padding: 25px;
 }
 
 /* Action */
-.action {
+#action {
   background: var(--silver_fox);
   box-shadow: var(--shadow);
   /* display: grid; */
   /* grid-gap: 30px; */
   /* grid-template-columns: repeat(2, 1fr); */
-  padding: 3rem;
-  margin-top: 2rem;
+  padding: 2em;
+  margin-top: 2em;
+}
+div.action {
+  width: 45%;
+  margin: 0 2.5%;
+  padding: 1em;
+  display: inline-block;
 }
 
-.action h2 {
+#action h2 {
   text-align: center;
   font-size: 1.9rem;
   text-transform: uppercase;
@@ -318,6 +359,12 @@ footer {
 
 .carousel-item img {
   width: 100%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  height: fit-content;
+  top: 50%;
 }
 
 .container {

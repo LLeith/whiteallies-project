@@ -15,7 +15,8 @@
 <?php endif; ?>
 
 
-</section><?php get_sidebar(); ?>
+</section>
+<?php get_sidebar(); ?>
 
 </main>
 <?php get_footer(); ?>

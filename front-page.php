@@ -1,6 +1,7 @@
 <?php
   get_header();
 ?>
+<main class="wrap">
 
       <section class="top-container">
 
@@ -136,15 +137,15 @@
     </section>
 
     <!-- Action section -->
-    <?php if ( has_nav_menu('secondary') ) { ?>
-    <section class="action" id="action">
-      <h2>Action Allies</h2>
-      <?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
-      <img src="<?php bloginfo('template_url');?>/assets/images/pexels-andrea-piacquadio-3865557.jpg" alt="multiple races of people putting hands together and smiling">
-    </section>
+    <?php if ( is_active_sidebar( 'action' ) ) { ?>
+      <section class="action" id="action">
+        <h2>Action Allies</h2>
+        <?php dynamic_sidebar( 'action' ); ?>
+      </section>
     <?php } ?>
 
     <!--footer-->
+  </main>
 
 
   <?php
