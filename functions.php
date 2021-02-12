@@ -73,6 +73,17 @@ function whiteallie_widget_areas(){
       'description' => 'Put your Mission Statement here'
     )
   );
+  register_sidebar(
+    array(
+      'name' => 'Action Allies',
+      'id' => 'action',
+      'before_title' => '<h2>',
+      'after_title' => '</h2>',
+      'before_widget' => '<div class="action">',
+      'after_widget' => '</div>',
+      'description' => 'Links to site resources'
+    )
+  );
 }
 add_action( 'widgets_init', 'whiteallie_widget_areas');
 
@@ -123,6 +134,7 @@ function waslider_custom_post_type() {
                 'public'      => true,
                 'has_archive' => true,
                 'menu_icon' => 'dashicons-chart-area',
+                'supports' => array('title','thumbnail','excerpt', 'editor')
         )
     );
 }

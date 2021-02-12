@@ -25,9 +25,9 @@
           $logo = wp_get_attachment_image_src($custom_logo_id);
       }
       ?>
-      <div class="logo"><a href="<?php echo site_url() ?>"><img src="<?php echo $logo[0]; ?>" width="100" height="100" alt="white allies logo"></a></div>
-      <nav>
+      <nav class="main">
 
+        <?php the_custom_logo(); ?>
         <?php
           wp_nav_menu(
             array(

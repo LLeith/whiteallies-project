@@ -73,14 +73,24 @@ nav {
   overflow: auto;
 }
 
+nav.main {
+  display: block;
+  background-color: var(--charcoal_grey);
+  padding: 1em;
+}
+
+nav.main .menu-item {
+  display: inline-block;
+}
+
 ul.navigation {
-  display: grid;
+  display: inline-block;
   overflow: hidden;
   background-color: var(--charcoal_grey);
-  grid-template-columns: repeat(5, 1fr);
   padding: 0;
-  margin: 0 0 0 125px;
+  margin: 0 1em 0 0;
   list-style-type: none;
+  float: right;
 }
 /* Style the Action Allies menu */
 section#action ul.menu {
@@ -91,11 +101,15 @@ section#action ul.menu li {
 }
 /* ---------------------------- */
 
-.logo img {
-  position: absolute;
+.custom-logo-link {
   margin-top: 0;
-  margin-left: 10px;
-  margin-bottom: 10px;
+  margin-left: 1em;
+  display: inline-block;
+}
+.custom-logo-link img {
+  width: 100px;
+  height: auto;
+  filter:  brightness(0) invert(1);
 }
 
 .menu-item a {
@@ -135,11 +149,11 @@ article.content {
     padding: 2em;
 }
 
-.menu-action-allies-menu-container {
-    width: 50%;
+/* .menu-action-allies-menu-container { */
+    /* width: 50%; */
     /* float: right; */
-    padding: 2em;
-}
+    /* padding: 2em; */
+/* } */
 
 /* Showcase */
 .showcase {
@@ -223,7 +237,8 @@ article.content {
 
 .wpcf7 textarea,
 .wpcf7 input,
-.wpcf7 label {
+.wpcf7 label,
+.wpcf7 select {
   width: 100%;
   }
 
@@ -244,7 +259,7 @@ main.wrap {
   /* grid-template-columns: repeat(auto-fit, minmax(250px, 3fr)); */
   /* grid-auto-rows: 300px; */
   width: 85%;
-  /* margin: 2em auto; */
+  margin: 2em auto;
   text-align: center;
 }
 
@@ -282,17 +297,23 @@ main.wrap {
 }
 
 /* Action */
-.action {
+#action {
   background: var(--silver_fox);
   box-shadow: var(--shadow);
   /* display: grid; */
   /* grid-gap: 30px; */
   /* grid-template-columns: repeat(2, 1fr); */
-  padding: 3rem;
-  margin-top: 2rem;
+  padding: 2em;
+  margin-top: 2em;
+}
+div.action {
+  width: 45%;
+  margin: 0 2.5%;
+  padding: 1em;
+  display: inline-block;
 }
 
-.action h2 {
+#action h2 {
   text-align: center;
   font-size: 1.9rem;
   text-transform: uppercase;
