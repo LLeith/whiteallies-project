@@ -18,7 +18,6 @@ add_action('after_setup_theme', 'whiteallie_theme_support');
 function whiteallie_menus() {
   $locations = array(
     'primary' => "Desktop primary top nav",
-    'secondary' => "Action Allies (front page)",
     'footer' => "Footer menu items"
   );
   register_nav_menus($locations);
@@ -98,17 +97,6 @@ function waslider_custom_post_type() {
                 'public'      => true,
                 'has_archive' => true,
                 'menu_icon' => 'dashicons-format-gallery',
-        )
-    );
-    register_post_type('wa_story',
-        array(
-            'labels'      => array(
-                'name'          => __('Stories', 'textdomain'),
-                'singular_name' => __('Story', 'textdomain'),
-            ),
-                'public'      => true,
-                'has_archive' => true,
-                'menu_icon' => 'dashicons-book-alt',
         )
     );
     register_post_type('allies',
