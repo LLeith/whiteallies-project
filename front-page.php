@@ -82,6 +82,7 @@ endif;
 
     <!-- Boxes Section -->
     <section class="boxes">
+      <h2>Stories from Allies</h2>
     	<?php
 		// Set our arguments for how we're sorting the Categories
 		$cat_args=array(
@@ -103,7 +104,7 @@ endif;
 		      	?>
 		      	<a href="<?php echo get_category_link( $category->term_id ); ?>">
 			      	<div class="box">
-			      		<h2><?php echo $category->name; ?></h2>
+			      		<h3><?php echo $category->name; ?></h3>
 			      		<p><?php echo $category->description; ?></p>
 			      	</div>
 			    </a>

@@ -74,13 +74,13 @@ function whiteallie_widget_areas(){
   );
   register_sidebar(
     array(
-      'name' => 'Action Allies',
-      'id' => 'action',
+      'name' => "Submit your Story",
+      'id' => 'story-form',
       'before_title' => '<h2>',
       'after_title' => '</h2>',
       'before_widget' => '<div class="action">',
       'after_widget' => '</div>',
-      'description' => 'Links to site resources'
+      'description' => 'The Contact Form for story submissions'
     )
   );
   register_sidebar(
@@ -96,13 +96,13 @@ function whiteallie_widget_areas(){
   );
   register_sidebar(
     array(
-      'name' => "Submit your Story",
-      'id' => 'story-form',
+      'name' => 'Action Allies',
+      'id' => 'action',
       'before_title' => '<h2>',
       'after_title' => '</h2>',
       'before_widget' => '<div class="action">',
       'after_widget' => '</div>',
-      'description' => 'The Contact Form for story submissions'
+      'description' => 'Links to site resources'
     )
   );
 }
