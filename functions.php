@@ -67,8 +67,8 @@ function whiteallie_widget_areas(){
       'id' => 'mission',
       'before_title' => '<h2>',
       'after_title' => '</h2>',
-      'before_widget' => '<section id="mission">',
-      'after_widget' => '</section>',
+      'before_widget' => '<div class="action">',
+      'after_widget' => '</div>',
       'description' => 'Put your Mission Statement here'
     )
   );
@@ -81,6 +81,28 @@ function whiteallie_widget_areas(){
       'before_widget' => '<div class="action">',
       'after_widget' => '</div>',
       'description' => 'Links to site resources'
+    )
+  );
+  register_sidebar(
+    array(
+      'name' => "Let's Talk",
+      'id' => 'lets-talk',
+      'before_title' => '<h2>',
+      'after_title' => '</h2>',
+      'before_widget' => '<div class="action">',
+      'after_widget' => '</div>',
+      'description' => 'Twitter feed etc.'
+    )
+  );
+  register_sidebar(
+    array(
+      'name' => "Submit your Story",
+      'id' => 'story-form',
+      'before_title' => '<h2>',
+      'after_title' => '</h2>',
+      'before_widget' => '<div class="action">',
+      'after_widget' => '</div>',
+      'description' => 'The Contact Form for story submissions'
     )
   );
 }
