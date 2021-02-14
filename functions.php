@@ -18,7 +18,6 @@ add_action('after_setup_theme', 'whiteallie_theme_support');
 function whiteallie_menus() {
   $locations = array(
     'primary' => "Desktop primary top nav",
-    'secondary' => "Action Allies (front page)",
     'footer' => "Footer menu items"
   );
   register_nav_menus($locations);
@@ -68,9 +67,31 @@ function whiteallie_widget_areas(){
       'id' => 'mission',
       'before_title' => '<h2>',
       'after_title' => '</h2>',
-      'before_widget' => '<section id="mission">',
-      'after_widget' => '</section>',
+      'before_widget' => '<div class="action">',
+      'after_widget' => '</div>',
       'description' => 'Put your Mission Statement here'
+    )
+  );
+  register_sidebar(
+    array(
+      'name' => "Submit your Story",
+      'id' => 'story-form',
+      'before_title' => '<h2>',
+      'after_title' => '</h2>',
+      'before_widget' => '<div class="action">',
+      'after_widget' => '</div>',
+      'description' => 'The Contact Form for story submissions'
+    )
+  );
+  register_sidebar(
+    array(
+      'name' => "Let's Talk",
+      'id' => 'lets-talk',
+      'before_title' => '<h2>',
+      'after_title' => '</h2>',
+      'before_widget' => '<div class="action">',
+      'after_widget' => '</div>',
+      'description' => 'Twitter feed etc.'
     )
   );
   register_sidebar(
@@ -98,17 +119,6 @@ function waslider_custom_post_type() {
                 'public'      => true,
                 'has_archive' => true,
                 'menu_icon' => 'dashicons-format-gallery',
-        )
-    );
-    register_post_type('wa_story',
-        array(
-            'labels'      => array(
-                'name'          => __('Stories', 'textdomain'),
-                'singular_name' => __('Story', 'textdomain'),
-            ),
-                'public'      => true,
-                'has_archive' => true,
-                'menu_icon' => 'dashicons-book-alt',
         )
     );
     register_post_type('allies',
