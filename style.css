@@ -30,6 +30,10 @@ Author URI: https://webdevapprentice.uk/
   margin: 0;
 }
 
+a {
+  color: var(--Apricot);
+}
+
 html {
   box-sizing: border-box;
   font-family: 'Spartan', sans-serif;
@@ -108,7 +112,7 @@ section#action ul.menu {
     list-style-type: none;
 }
 section#action ul.menu li {
-    margin: 1em 0;
+    margin: 0 0 1em 0;
 }
 /* ---------------------------- */
 
@@ -305,6 +309,7 @@ div.action {
   margin: 0 2.5%;
   padding: 1em;
   display: inline-block;
+  vertical-align: top;
 }
 section#mission div.action,
 section#story-form div.action {

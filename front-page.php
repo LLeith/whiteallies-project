@@ -42,7 +42,7 @@ if ( $loop->have_posts() ) :
         <div class="overlay-image-1"></div>
         <div class="container">
           <h1><?php echo $title; ?></h1>
-          <p><?php echo $excerpt; ?></p>
+          <p><?php echo the_content(); ?></p>
           <a href="<?php echo $link['url']; ?>" class="button" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
         </div>
       </div>
