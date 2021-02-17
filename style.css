@@ -479,6 +479,12 @@ footer {
 /* Effective for 767px or less - i pads */
 @media(max-width: 767px) {
 
+  .custom-logo-link {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
   /*  2 top boxes to slide under the showcase img on a large mobile */
   .top-container {
     grid-template-areas: 'showcase showcase'
@@ -528,18 +534,69 @@ footer {
   }
 
   .boxes {
-    margin-right: 0;
-    margin-left: 0;
+    width: 100%;
   }
 
   .box {
     word-break: break-word;
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0;
   }
 
   .lets_talk {
     /* makes the section stack up as a column on a mobile */
     grid-template-columns: 1fr;
   }
+
+  section.grey-area {
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0;
+    text-align: center;
+  }
+
+  div.action {
+    width: 100%;
+  }
+
+  ul#menu-action-allies-menu .menu-item a {
+    text-align: center;
+  }
+
+  .wpcf7 .half-width {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .carousel-inner>.carousel-item>img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  ul.navigation {
+    float: none;
+  }
+
+  .menu-item a {
+    text-align: left;
+  }
+
+  nav.main .menu-item {
+    display: block;
+    margin: 0 auto;
+  }
+
+  li.menu-item-has-children > a:after {
+    content: '\25BC';
+    float: right;
+  }
+
+  main.wrap {
+    max-width:95%;
+    padding: 1em;
+  }
+
 }
 
 @media(max-width: 500px) {
