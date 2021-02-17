@@ -540,6 +540,7 @@ footer {
   .box {
     word-break: break-word;
     width: 100%;
+    max-width: 300px;
     padding: 1em;
     margin: 1em 0;
   }
