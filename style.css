@@ -271,8 +271,13 @@ article.content {
 
 .wpcf7 .half-width {
     width: calc(50% - 2em);
-    margin: 2em;
+    margin-left: 0;
+    margin-right: 2em;
     float: left;
+}
+.wpcf7 .half-width ~ .half-width {
+  margin-left: 2em;
+  margin-right: 0;
 }
 
 main.wrap {
