@@ -73,6 +73,10 @@ img {
 }
 
 /* Navigation */
+#mobile-nav {
+  display: none;
+}
+
 nav {
   overflow: auto;
 }
@@ -478,6 +482,13 @@ footer {
 /* Media Queries */
 /* Effective for 767px or less - i pads */
 @media(max-width: 767px) {
+
+  #main-nav {
+    display: none;
+  }
+  #mobile-nav {
+    display: block;
+  }
 
   .custom-logo-link {
     text-align: center;
