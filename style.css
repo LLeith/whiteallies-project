@@ -316,6 +316,10 @@ main.wrap {
   margin: 2em;
 }
 
+a:hover .box {
+  background-color: var(--Cerulean);
+}
+
 .box h2 {
   color: var(--Apricot);
   font-size: 1.5rem;
