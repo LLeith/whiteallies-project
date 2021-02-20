@@ -143,10 +143,45 @@ function waslider_custom_post_type() {
             ),
                 'public'      => true,
                 'has_archive' => true,
-                'menu_icon' => 'dashicons-chart-area',
+                'menu_icon' => 'dashicons-chart-pie',
                 'supports' => array('title','thumbnail','excerpt', 'editor')
         )
     );
+    register_post_type('resource',
+        array(
+            'labels'      => array(
+                'name'          => __('Resources', 'textdomain'),
+                'singular_name' => __('Resource', 'textdomain'),
+            ),
+                'public'      => true,
+                'has_archive' => true,
+                'menu_icon' => 'dashicons-paperclip',
+                'supports' => array('title','thumbnail','excerpt', 'editor'),
+                'taxonomies' => array('resource_category', 'post_tag'),
+        )
+    );
+    $labels = array(
+      'name' => _x( 'Resource Types', 'taxonomy general name' ),
+      'singular_name' => _x( 'Resource Type', 'taxonomy singular name' ),
+      'search_items' =>  __( 'Search Resource Types' ),
+      'all_items' => __( 'All Resource Types' ),
+      'parent_item' => __( 'Parent Resource Type' ),
+      'parent_item_colon' => __( 'Parent Resource Type:' ),
+      'edit_item' => __( 'Edit Resource Type' ),
+      'update_item' => __( 'Update Resource Type' ),
+      'add_new_item' => __( 'Add New Resource Type' ),
+      'new_item_name' => __( 'New Resource Type Name' ),
+      'menu_name' => __( 'Resource Types' ),
+    );
+    register_taxonomy('resource_type',array('resource'), array(
+      'hierarchical' => true,
+      'labels' => $labels,
+      'show_ui' => true,
+      'show_in_rest' => true,
+      'show_admin_column' => true,
+      'query_var' => true,
+      'rewrite' => array( 'slug' => 'type' ),
+  ));
 }
 add_action('init', 'waslider_custom_post_type');
 add_post_type_support( 'wa_slider', 'thumbnail' );
