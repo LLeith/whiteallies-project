@@ -34,16 +34,18 @@
                 'menu' => 'primary',
                 'container' => '',
                 'theme_location' => 'primary',
-                'items_wrap' => '<ul id="" class="navigation">%3$s</ul>'
+                'items_wrap' => '<ul id="main-nav" class="navigation">%3$s</ul>'
               )
             );
          ?>
-
-        <!-- <ul class="navigation">
-          <li class="nav-item"><a href="#mission">Home</a></li>
-          <li class="nav-item"><a href="#info">Our Story</a></li>
-          <li class="nav-item"><a href="#action_allies">Action Allies</a></li>
-          <li class="nav-item"><a href="#">Contact</a></li>
-          <li class="nav-item"><a href="#">Donate</a></li>
-        </ul> -->
+         <?php
+           wp_nav_menu(
+             array(
+                 'menu' => 'primary',
+                 'container' => '',
+                 'theme_location' => 'primary',
+                 'items_wrap' => '<ul id="mobile-nav" class="navigation">%3$s</ul>'
+               )
+             );
+          ?>
       </nav>
