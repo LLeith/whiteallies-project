@@ -4,8 +4,6 @@ Text Domain: White Allies
 Version: 1.0
 Description: category based for story collection
 Tags: responsive, fancy
-Author: web developer apprentice network
-Author URI: https://webdevapprentice.uk/
 */
 /* CSS Variables */
 :root {
@@ -66,6 +64,7 @@ h2 {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .wrapper {
