@@ -29,12 +29,12 @@ Tags: responsive, fancy
 }
 
 a {
-  color: var(--Apricot);
+  color: var(--Deep_Apricot);
 }
 
 a.cta {
     padding: 1em;
-    background-color: var(--Apricot);
+    background-color: var(--Deep_Apricot);
     color: white;
     margin: 1em 0;
     border-radius: 5px;
@@ -65,7 +65,7 @@ h2 {
 }
 
 .btn {
-  background-color: var(--Apricot);
+  background-color: var(--Deep_Apricot);
   color: var(--light);
   padding: 0.6rem 1.3rem;
   text-decoration: none;
@@ -313,7 +313,7 @@ main.wrap {
   /* margin-right: 20em; */
   /* grid-template-columns: repeat(auto-fit, minmax(250px, 3fr)); */
   /* grid-auto-rows: 300px; */
-  width: 85%;
+  width: 100%;
   margin: 2em auto;
   text-align: center;
 }
@@ -335,7 +335,7 @@ a:hover .box {
 }
 
 .box h2 {
-  color: var(--Apricot);
+  color: var(--Deep_Apricot);
   font-size: 1.5rem;
 }
 
@@ -391,7 +391,7 @@ section.boxes h2 {
 }
 
 .box h3 {
-  color: var(--Apricot);
+  color: var(--Deep_Apricot);
   font-family: 'Krona One', sans-serif;
   font-size: 1.6em;
 }
@@ -535,7 +535,7 @@ footer {
 
 /* Media Queries */
 /* Effective for 767px or less - i pads */
-@media(max-width: 767px) {
+@media(max-width: 768px) {
 
   #main-nav {
     display: none;
@@ -590,16 +590,13 @@ footer {
   .action {
     /* makes the nav stack up as a column on a mobile */
     grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .btn {
     display: block;
     text-align: center;
     margin: auto;
-  }
-
-  .boxes {
-    width: 100%;
   }
 
   .box {
