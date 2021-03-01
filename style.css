@@ -367,6 +367,21 @@ section#mission div.action,
 section#story-form div.action {
   width: 100%;
 }
+div.action .menu-item a {
+  text-align: left;
+}
+
+form.wpcf7-form h4 {
+  margin: 1em auto;
+  background-color: var(--charcoal_grey);
+  color: white;
+  font-size: 1.1em;
+  padding: 1em;
+  border-radius: 5px;
+}
+form.wpcf7-form p.story {
+  font-weight: bold;
+}
 
 section.grey-area h2,
 section.boxes h2 {
@@ -381,9 +396,17 @@ section.boxes h2 {
   font-size: 1.6em;
 }
 
+.box img {
+  margin-bottom: 2em;
+}
+
+.box h3 {
+  margin-bottom: 1em;
+}
+
 .action p {
   padding: 0;
-  text-align: center;
+  /* text-align: center; */
 }
 
 a.action-btn {
@@ -396,6 +419,19 @@ a.action-btn {
   padding: 0.6rem 1.3rem;
   text-decoration: none;
   border: 0;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Footer */
