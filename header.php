@@ -44,7 +44,11 @@
                  'menu' => 'primary',
                  'container' => '',
                  'theme_location' => 'primary',
-                 'items_wrap' => '<ul id="mobile-nav" class="navigation">%3$s</ul>'
+                 'items_wrap' => '<div class="mobile-menu-toggle">
+                                   <img src="'.get_template_directory_uri() . '/assets/images/hamburger-icon.png" width="30px" id="hamburger">
+                                   <ul id="mobile-nav" class="navigation menu">
+                                   %3$s
+                                   </ul>'
                )
              );
           ?>
