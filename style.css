@@ -28,11 +28,6 @@ Tags: responsive, fancy
   margin: 0;
 }
 
-blockquote {
-  background-color: white;
-  border: solid 2px var(--charcoal_grey);
-  padding: 2em;
-}
 
 a {
   color: var(--Deep_Apricot);
@@ -285,6 +280,16 @@ article.content {
   padding: 25px;
   text-align: center;
 }
+
+.wpcf7 blockquote {
+  background-color: white;
+  border: solid 2px var(--charcoal_grey);
+  padding: 2em;
+}
+.wpcf7 blockquote p {
+  margin-bottom: 0;
+}
+
 
 .wpcf7 textarea,
 .wpcf7 input,
