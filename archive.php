@@ -2,7 +2,7 @@
   get_header();
 ?>
 
-<article class="boxes">
+<article class="boxes archive">
 
   <?php
     if( have_posts() ){

@@ -209,4 +209,11 @@ function wa_menu_classes( $classes, $item, $args ) {
   return $classes;
 }
 add_filter( 'nav_menu_css_class', 'wa_menu_classes', 1, 3 );
+
+
+// Remove the limit on the number of posts displayed on archive wa_nav_menu_page_excerpts
+add_action( 'pre_get_posts', 'wa_no_limit_posts' );
+function wa_no_limit_posts( $query ) {
+        $query->set( 'posts_per_page', '-1' );
+}
 ?>

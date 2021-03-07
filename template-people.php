@@ -11,7 +11,7 @@ $loop = new WP_Query( array(
 );
 ?>
 <main class="wrap">
-  <section class="boxes">
+  <section class="boxes archive">
 
   <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
