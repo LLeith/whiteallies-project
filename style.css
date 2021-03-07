@@ -104,7 +104,7 @@ nav.main {
 
 nav.main .menu-item {
   display: inline-block;
-  min-width: 180px;
+  /* min-width: 180px; */
 }
 
 ul.navigation,
