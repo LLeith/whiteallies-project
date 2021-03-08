@@ -12,7 +12,7 @@ $taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
 
 foreach( $taxonomies as $taxonomy ) :
 
-?>  <section class="boxes"> <?php
+?>  <section class="boxes archive"> <?php
     // Gets every "category" (term) in this taxonomy to get the respective posts
     $terms = get_terms( $taxonomy );
 

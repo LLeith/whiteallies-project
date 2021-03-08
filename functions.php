@@ -44,6 +44,7 @@ function whiteallie_register_scripts(){
   wp_enqueue_script('whiteallie-jquery', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), '3.5.1',true);
   wp_enqueue_script('whiteallie-popper', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', array(), '4.5.3',true);
   wp_enqueue_script('whiteallie-jsicons', 'https://unpkg.com/ionicons@5.1.2/dist/ionicons.js', array(), '5.1.2',true);
+  wp_enqueue_script('whiteallie-responsive-menu', get_template_directory_uri() . "/assets/js/responsive-menu.js", array(), '5.1.2',true);
 }
 add_action( 'wp_enqueue_scripts', 'whiteallie_register_scripts');
 
@@ -208,4 +209,11 @@ function wa_menu_classes( $classes, $item, $args ) {
   return $classes;
 }
 add_filter( 'nav_menu_css_class', 'wa_menu_classes', 1, 3 );
+
+
+// Remove the limit on the number of posts displayed on archive wa_nav_menu_page_excerpts
+add_action( 'pre_get_posts', 'wa_no_limit_posts' );
+function wa_no_limit_posts( $query ) {
+        $query->set( 'posts_per_page', '-1' );
+}
 ?>
