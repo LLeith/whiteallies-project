@@ -28,6 +28,7 @@ Tags: responsive, fancy
   margin: 0;
 }
 
+
 a {
   color: var(--Deep_Apricot);
 }
@@ -280,9 +281,23 @@ article.content {
   text-align: center;
 }
 
+
 .wpcf7 textarea {
   width: 100%;
 }
+
+.wpcf7 blockquote {
+  background-color: white;
+  border: solid 2px var(--charcoal_grey);
+  padding: 2em;
+}
+.wpcf7 blockquote p {
+  margin-bottom: 0;
+}
+
+
+
+
 .wpcf7 input,
 .wpcf7 select {
   width: 100%;
@@ -389,10 +404,13 @@ div.action .menu-item a {
 
 form.wpcf7-form blockquote {
   margin: 1em auto;
+
   border: var(--charcoal_grey) solid 1px;
   color: black;
   background-color: white;
+
   font-size: 1.1em;
+  font-weight: bold;
   padding: 1em;
   border-radius: 5px;
 }
