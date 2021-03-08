@@ -38,7 +38,6 @@ a.cta {
     color: white;
     margin: 1em 0;
     border-radius: 5px;
-    width: 100%;
     display: inline-block;
     text-align: center;
 }
@@ -67,7 +66,7 @@ h2 {
 .btn {
   background-color: var(--Deep_Apricot);
   color: var(--light);
-  padding: 0.6rem 1.3rem;
+  /* padding: 0.6rem 1.3rem; */
   text-decoration: none;
   border: 0;
 }
@@ -281,12 +280,18 @@ article.content {
   text-align: center;
 }
 
-.wpcf7 textarea,
+.wpcf7 textarea {
+  width: 100%;
+}
 .wpcf7 input,
-.wpcf7 label,
 .wpcf7 select {
   width: 100%;
-  }
+  height: 35px;
+}
+.wpcf7 label {
+  width: 100%;
+  height: auto;
+ }
 
 .wpcf7 .half-width {
     width: calc(50% - 2em);
@@ -382,10 +387,11 @@ div.action .menu-item a {
   text-align: left;
 }
 
-form.wpcf7-form h4 {
+form.wpcf7-form blockquote {
   margin: 1em auto;
-  background-color: var(--charcoal_grey);
-  color: white;
+  border: var(--charcoal_grey) solid 1px;
+  color: black;
+  background-color: white;
   font-size: 1.1em;
   padding: 1em;
   border-radius: 5px;
