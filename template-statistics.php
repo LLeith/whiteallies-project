@@ -17,7 +17,7 @@ $loop = new WP_Query( array(
   <a href="<?php the_permalink(); ?>">
     <div class="box">
       <?php the_post_thumbnail(); ?>
-      <h2><?php the_title();; ?></h2>
+      <h3><?php the_title();; ?></h3>
       <p><?php the_excerpt(); ?></p>
     </div>
   </a>

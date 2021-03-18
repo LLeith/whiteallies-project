@@ -86,7 +86,7 @@ endif;
     <?php } ?>
 
     <!-- Boxes Section -->
-    <section class="boxes">
+    <section id="stories" class="boxes">
       <h2>Stories from Allies</h2>
     	<?php
 		// Set our arguments for how we're sorting the Categories
