@@ -20,12 +20,14 @@ Tags: responsive, fancy
   --silver_fox: #d4d4dc;
   --Magenta: #83085E;
   --Deep_Apricot: #ED6908;
+  --Deep_Apricot_pale: #F8C39C;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-size: 20px;
 }
 
 
@@ -58,6 +60,7 @@ body {
   line-height: 1.4;
   overflow-x: hidden;
   position: relative;
+  font-size: 1.1em;
 }
 
 h2 {
@@ -142,7 +145,7 @@ section.grey-area {
     margin: 4em auto;
     padding: 2em;
     display: block;
-    background: var(--silver_fox);
+    background: var(--Deep_Apricot_pale);
     box-shadow: var(--shadow);
 }
 
@@ -178,7 +181,7 @@ section#action ul.menu li {
 }
 
 .menu-item a span.excerpt {
-  font-size: initial;
+  /* font-size: initial; */
   font-weight: initial;
 }
 
@@ -226,7 +229,7 @@ article.content {
 }
 
 .container h1 {
-  font-size: 4rem;
+  font-size: 4em;
   margin-bottom: 0;
   color: var(--light);
   font-family: 'Krona One', Helvetica, Sans-serif;
@@ -235,7 +238,7 @@ article.content {
 }
 
 .container p {
-  font-size: 1.3rem;
+  font-size: 1.3em;
   margin-top: 0;
   color: var(--light);
   font-family: Arial, Helvetica, Sans-serif;
@@ -247,7 +250,7 @@ article.content {
 }
 
 #mission p, #info p {
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* Top Box */
@@ -298,7 +301,9 @@ article.content {
 
 
 
-.wpcf7 input,
+.wpcf7 input {
+  width: 100%;
+}
 .wpcf7 select {
   width: 100%;
   height: 35px;
@@ -306,6 +311,7 @@ article.content {
 .wpcf7 label {
   width: 100%;
   height: auto;
+  text-align: left;
  }
 
 .wpcf7 .half-width {
@@ -397,6 +403,7 @@ div.action {
 section#mission div.action,
 section#story-form div.action {
   width: 100%;
+  margin: 0 auto;
 }
 div.action .menu-item a {
   text-align: left;
@@ -428,7 +435,7 @@ section.boxes h2 {
 .box h3 {
   color: var(--Deep_Apricot);
   font-family: 'Krona One', sans-serif;
-  font-size: 1.6em;
+  font-size: 1.1em;
   text-transform: uppercase;
   margin-bottom: 1em;
 }
@@ -511,12 +518,14 @@ footer {
 .carousel .container {
   /* text at bottom */
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
   left: 0;
   right: 0;
   padding-left: 3em;
   padding-right: 3em;
   padding-bottom: 2em;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .overlay-image-1 {
@@ -528,6 +537,10 @@ footer {
   background-position: centre;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.3);
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
 
 .overlay-image-2 {
@@ -670,15 +683,22 @@ footer {
     width: 100%;
     padding: 1em;
     margin: 1em 0;
-    text-align: center;
+    /* text-align: center; */
   }
 
   div.action {
     width: 100%;
+    padding: 0.8em;
+    margin: auto;
+  }
+
+  .wpcf7 {
+    padding: 0.8em;
   }
 
   ul#menu-action-allies-menu .menu-item a {
-    text-align: center;
+    /* text-align: center; */
+    padding: 0.8em;
   }
 
   .wpcf7 .half-width {
@@ -743,11 +763,11 @@ footer {
   }
 
   #info {
-    text-align: center;
+    /* text-align: center; */
   }
 
   #twitter_feed {
-    text-align: center;
+    /* text-align: center; */
   }
 
   #twitter_feed p {
