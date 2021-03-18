@@ -250,7 +250,7 @@ article.content {
 }
 
 #mission p, #info p {
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* Top Box */
@@ -402,6 +402,7 @@ div.action {
 section#mission div.action,
 section#story-form div.action {
   width: 100%;
+  margin: 0 auto;
 }
 div.action .menu-item a {
   text-align: left;
@@ -681,15 +682,22 @@ footer {
     width: 100%;
     padding: 1em;
     margin: 1em 0;
-    text-align: center;
+    /* text-align: center; */
   }
 
   div.action {
     width: 100%;
+    padding: 0.8em;
+    margin: auto;
+  }
+
+  .wpcf7 {
+    padding: 0.8em;
   }
 
   ul#menu-action-allies-menu .menu-item a {
-    text-align: center;
+    /* text-align: center; */
+    padding: 0.8em;
   }
 
   .wpcf7 .half-width {
@@ -754,11 +762,11 @@ footer {
   }
 
   #info {
-    text-align: center;
+    /* text-align: center; */
   }
 
   #twitter_feed {
-    text-align: center;
+    /* text-align: center; */
   }
 
   #twitter_feed p {
