@@ -34,7 +34,7 @@ function whiteallie_register_styles(){
   wp_enqueue_style('whiteallie-style', get_template_directory_uri() . "/style.css", array('whiteallie-bootstrap'), $version, 'all');
   wp_enqueue_style('whiteallie-bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css", array(), '4.5.3', 'all');
   wp_enqueue_style('whiteallie-googlefontKrona', "https://fonts.googleapis.com/css2?family=Krona+One&display=swap", array(), '1.0', 'all');
-  wp_enqueue_style('whiteallie-googlefontSpartan', "https://fonts.googleapis.com/css2?family=Spartan&display=swap", array(), '1.0', 'all');
+  wp_enqueue_style('whiteallie-googlefontJura', "https://fonts.googleapis.com/css2?family=Jura&display=swap", array(), '1.0', 'all');
 }
 add_action( 'wp_enqueue_scripts', 'whiteallie_register_styles');
 
