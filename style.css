@@ -167,7 +167,7 @@ section#action ul.menu li {
 .custom-logo-link img {
   width: 100px;
   height: auto;
-  filter:  brightness(0) invert(1);
+  /* filter:  brightness(0) invert(1); */
 }
 
 .menu-item a {
