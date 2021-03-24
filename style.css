@@ -239,10 +239,10 @@ article.content {
 }
 
 .container p {
-  font-size: 1.3em;
+  font-size: 1.4em;
   margin-top: 0;
   color: var(--light);
-  font-family: Arial, Helvetica, Sans-serif;
+  /* font-family: Arial, Helvetica, Sans-serif; */
 }
 
 #mission h2, #info h2 {
