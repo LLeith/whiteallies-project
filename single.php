@@ -1,5 +1,5 @@
-<?php 
-  get_header(); 
+<?php
+  get_header();
 ?>
 
 <article class="content">
@@ -14,7 +14,5 @@
 
 </article>
 
-<?php 
-  get_footer(); 
-?>
-
+<?php
+  get_footer();

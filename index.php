@@ -19,4 +19,4 @@
 <?php get_sidebar(); ?>
 
 </main>
-<?php get_footer(); ?>
+<?php get_footer();

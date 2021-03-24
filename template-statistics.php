@@ -28,4 +28,3 @@ $loop = new WP_Query( array(
 
 <?php
 get_footer();
-?>
