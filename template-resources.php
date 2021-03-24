@@ -60,4 +60,3 @@ endforeach; ?>
 
 <?php
 get_footer();
-?>
