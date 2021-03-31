@@ -222,7 +222,7 @@ function wa_no_limit_posts( $query ) {
 add_filter( 'wp_nav_menu_items', 'wa_add_menu_item', 10, 2 );
 function wa_add_menu_item ( $items, $args ) {
      if( $args->theme_location == 'primary' ) {
-         $items .=  '<li class="menu-item">'.get_search_form(false).'</li>';
+         $items .=  '<li class="menu-item menu-item-type-post_type menu-item-object-page">'.get_search_form(false).'</li>';
         }
          return $items;
   }

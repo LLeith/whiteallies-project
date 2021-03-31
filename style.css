@@ -170,7 +170,8 @@ section#action ul.menu li {
   /* filter:  brightness(0) invert(1); */
 }
 
-.menu-item a {
+.menu-item a,
+.menu-item form {
   display: block;
   background-color: var(--charcoal_grey);
   color: var(--light);
@@ -190,6 +191,15 @@ section#action ul.menu li {
   background-color: var(--Cerulean);
   text-decoration: none;
   color: var(--light);
+}
+
+.menu-item form#searchform div {
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+.menu-item form#searchform div input {
+  max-width:150px;
 }
 
 /* Top Container */
