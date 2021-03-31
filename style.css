@@ -1,7 +1,7 @@
 /*
 Theme Name: White Allies
 Text Domain: White Allies
-Version: 1.6
+Version: 1.7
 Description: category based for story collection
 Tags: responsive, fancy
 */
@@ -27,7 +27,7 @@ Tags: responsive, fancy
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 20px;
+  font-size: 26px;
   font-family: 'Jura', sans-serif;
 }
 
@@ -170,7 +170,8 @@ section#action ul.menu li {
   /* filter:  brightness(0) invert(1); */
 }
 
-.menu-item a {
+.menu-item a,
+.menu-item form {
   display: block;
   background-color: var(--charcoal_grey);
   color: var(--light);
@@ -178,7 +179,7 @@ section#action ul.menu li {
   padding: 1em 2em;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
 }
 
 .menu-item a span.excerpt {
@@ -190,6 +191,15 @@ section#action ul.menu li {
   background-color: var(--Cerulean);
   text-decoration: none;
   color: var(--light);
+}
+
+.menu-item form#searchform div {
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+.menu-item form#searchform div input {
+  max-width:150px;
 }
 
 /* Top Container */
@@ -328,7 +338,7 @@ article.content {
 
 main.wrap {
   max-width: 85%;
-  margin: 0 auto 2em;
+  margin: 2em auto 2em;
   padding: 0 3em 2em;
 }
 
@@ -374,7 +384,7 @@ a:hover .box {
 
 .box h2 {
   color: var(--Deep_Apricot);
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 /* Info */
@@ -429,14 +439,14 @@ form.wpcf7-form p.story {
 section.grey-area h2,
 section.boxes h2 {
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1em;
   text-transform: uppercase;
 }
 
 .box h3 {
   color: var(--Deep_Apricot);
   font-family: 'Krona One', sans-serif;
-  font-size: 1.1em;
+  font-size: 0.8em;
   text-transform: uppercase;
   margin-bottom: 1em;
 }
@@ -454,7 +464,7 @@ a.action-btn {
   display: block;
   text-align: center;
   margin: auto;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   background-color: var(--Cerulean);
   color: var(--light);
   padding: 0.6rem 1.3rem;
@@ -634,7 +644,7 @@ footer {
   }
 
   .container h1 {
-    font-size: 2.5rem;
+    font-size: 2.5em;
   }
 
   .logo img {
@@ -760,7 +770,7 @@ footer {
   }
 
   .box h2 {
-    font-size: 1rem;
+    font-size: 1em;
   }
 
   #info {

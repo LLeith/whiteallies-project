@@ -216,3 +216,13 @@ add_action( 'pre_get_posts', 'wa_no_limit_posts' );
 function wa_no_limit_posts( $query ) {
         $query->set( 'posts_per_page', '-1' );
 }
+
+
+// Add a search form to the main nav menus
+add_filter( 'wp_nav_menu_items', 'wa_add_menu_item', 10, 2 );
+function wa_add_menu_item ( $items, $args ) {
+     if( $args->theme_location == 'primary' ) {
+         $items .=  '<li class="menu-item menu-item-type-post_type menu-item-object-page">'.get_search_form(false).'</li>';
+        }
+         return $items;
+  }
