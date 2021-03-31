@@ -87,7 +87,7 @@ endif;
 
     <!-- Boxes Section -->
     <section id="stories" class="boxes">
-      <h2>Stories from Allies</h2>
+      <h2><?php echo wp_count_posts()->publish; ?> Stories from Allies</h2>
     	<?php
 		// Set our arguments for how we're sorting the Categories
 		$cat_args=array(
