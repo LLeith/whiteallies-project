@@ -6,8 +6,7 @@ $(document).mouseup(e => {
    {
      $menu.removeClass('expanded-mobile-menu');
   }
+  $('#hamburger').on('click', () => {
+    $menu.toggleClass('expanded-mobile-menu');
+  });
  });
-
-$('#hamburger').on('click', () => {
-  $menu.toggleClass('expanded-mobile-menu');
-});
