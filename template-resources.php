@@ -6,37 +6,44 @@ get_header();
 
 
 $post_type = 'resource';
+global $post;
+$page_slug = $post->post_name;
+$this_taxonomy = $page_slug;
 
 // Get all the taxonomies for this post type
-$taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
+// $taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
 
-foreach( $taxonomies as $taxonomy ) :
+// foreach( $taxonomies as $taxonomy ) :
 
 ?>  <section class="boxes archive"> <?php
     // Gets every "category" (term) in this taxonomy to get the respective posts
-    $terms = get_terms( $taxonomy );
+    // $terms = get_terms( $taxonomy );
 
-    foreach( $terms as $term ) : ?>
+    // foreach( $terms as $term ) :
+      ?>
 
-            <h2 class="mid-heading"><?php echo $term->name; ?></h2>
+
 
         <?php
         $args = array(
-                'post_type' => $post_type,
+                'post_type' => 'resource',
                 'posts_per_page' => -1,  //show all posts
 								'order' => 'ASC',
 								'orderby'   => 'meta_value, title',
                 'tax_query' => array(
                     array(
-                        'taxonomy' => $taxonomy,
+                        'taxonomy' => 'resource_type',
                         'field' => 'slug',
-                        'terms' => $term->slug,
+                        'terms' => array($this_taxonomy),
                     )
                 )
             );
         $posts = new WP_Query($args);
+        $term_name = get_term_by('slug', $this_taxonomy, 'resource_type')->name;
 
-        if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
+        if( $posts->have_posts() ):
+          ?> <h2 class="mid-heading"><?php echo $term_name; ?></h2> <?php
+          while( $posts->have_posts() ) : $posts->the_post(); ?>
             <a href="<?php the_permalink(); ?>">
               <div class="box">
                     <?php if(has_post_thumbnail()) { ?>
@@ -52,10 +59,11 @@ foreach( $taxonomies as $taxonomy ) :
         <?php endwhile; endif; ?>
         <hr>
 
-    <?php endforeach;
+    <?php
+  // endforeach;
     ?></section><?php
 
-endforeach; ?>
+// endforeach; ?>
 
 
 <?php
