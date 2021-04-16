@@ -27,7 +27,7 @@ Tags: responsive, fancy
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 26px;
+  font-size: 24px;
   font-family: 'Jura', sans-serif;
 }
 
@@ -360,7 +360,7 @@ main.wrap {
   background-color: var(--charcoal_grey);
   color: var(--light);
   text-align: center;
-  padding: 1.5rem 2rem;
+  padding: 1em;
   box-shadow: var(--shadow);
   display: inline-block;
   width: 300px;
