@@ -1,7 +1,7 @@
 /*
 Theme Name: White Allies
 Text Domain: White Allies
-Version: 1.7
+Version: 1.8
 Description: category based for story collection
 Tags: responsive, fancy
 */
@@ -615,8 +615,11 @@ footer {
     margin: 0 auto;
   }
 
-  nav.main ul li:hover > ul.sub-menu {
-    display: none;
+  nav.main ul li > ul.sub-menu {
+    /* display: none; */
+    display: block;
+    position: relative;
+    padding-left: 2em;
   }
   nav.main ul ul.sub-menu {
     width: 100%;
@@ -735,10 +738,10 @@ footer {
     margin: 0 auto;
   }
 
-  li.menu-item-has-children > a:after {
+  /* li.menu-item-has-children > a:after {
     content: '\25BC';
     float: right;
-  }
+  } */
 
   main.wrap {
     max-width:95%;
